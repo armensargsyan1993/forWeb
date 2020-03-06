@@ -1,6 +1,7 @@
 // out: ../css/style.css, compress: false
 
 @siteColor: #F23005;
+@bodyColor: #151515;
 
 
 *,
@@ -54,7 +55,7 @@ a{
 }
 
 body{
-    background-color: #151515;
+    background-color: @bodyColor;
 }
 
 .container{
@@ -140,13 +141,15 @@ body{
             width: 100%;
 
             & li{
-                height: 80px;
+                height: 60px;
+                
                 & a{
                     color:white;
+                    border-bottom: 2px solid @bodyColor;
                     &:hover{
                         transition: .3s;
-                        font-size: 18px;
                         color:@siteColor;
+                        border-bottom: 2px solid @siteColor;
                     }
                     
                 }
@@ -154,6 +157,20 @@ body{
                 & i{
                     color: @siteColor;
                     margin-right: 30px;
+                }
+            }
+        }
+
+        & .statistic{
+            & li{
+                height: 30px;
+                & span{
+                    color: white;
+                    &:nth-child(1){
+                        display: inline-block;
+                        max-width: 100px;
+                        width: 100%;
+                    }
                 }
             }
         }

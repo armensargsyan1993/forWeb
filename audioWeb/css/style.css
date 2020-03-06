@@ -113,19 +113,31 @@ body {
   width: 100%;
 }
 .body .nav ul li {
-  height: 80px;
+  height: 60px;
 }
 .body .nav ul li a {
   color: white;
+  border-bottom: 2px solid #151515;
 }
 .body .nav ul li a:hover {
   transition: 0.3s;
-  font-size: 18px;
   color: #F23005;
+  border-bottom: 2px solid #F23005;
 }
 .body .nav ul li i {
   color: #F23005;
   margin-right: 30px;
+}
+.body .nav .statistic li {
+  height: 30px;
+}
+.body .nav .statistic li span {
+  color: white;
+}
+.body .nav .statistic li span:nth-child(1) {
+  display: inline-block;
+  max-width: 100px;
+  width: 100%;
 }
 .body .images {
   display: flex;
