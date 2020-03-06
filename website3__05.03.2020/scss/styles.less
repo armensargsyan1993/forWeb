@@ -1,0 +1,493 @@
+// out: ../css/style.css, compress: false
+
+@font-face{
+    font-family: 'MyWebFont';
+    src: url('../fonts/big_noodle_titling.ttf')
+}
+    
+
+
+@import './myOtherStyle.less';
+
+@bigLetterSpacing: 11px;
+@normalLetterSpacing: 7px;
+@smollLetterSpacing: 4px;
+@ExtrasmollLetterSpacing: 2px;
+
+@WhiteTextColor: #D6C9C9;
+@blackTextColor: #3D3D3D;
+@bodyBgClr: #F8F6F6;
+@headerBgClr: #353535;
+@itemBgClr: #EBEBEB;
+@sectionClr: #171F23;
+
+@shadow: 2px 2px #F15324;
+
+
+@tablet: ~"(max-width: 500px)";
+
+
+h1{
+    font-size: 72px;
+}
+
+h2{
+    font-size: 48px;
+}
+
+h1,h2{
+    letter-spacing: @normalLetterSpacing;
+}
+
+h3,h4{
+    letter-spacing: @smollLetterSpacing;
+}
+
+h5,h6{
+    letter-spacing: @ExtrasmollLetterSpacing;
+}
+
+h4{
+    margin: 0;
+}
+
+h1,h2,h3,h4,h5,h6{
+        font-family: MyWebFont;
+}
+
+.activated{
+    font-weight: bold;
+}
+
+.animations img{
+    height: 250px;
+    width: 250px;
+}
+
+
+body{
+    background-color: @bodyBgClr ;
+    color: @WhiteTextColor ;
+    text-align: center;
+    
+}
+
+
+
+
+.title{
+    text-align: center;
+    position: relative;
+    padding-top: 71px ;
+    padding-bottom: 52px;
+
+    & h2:after{
+        content: '';
+        width: 154px;
+        height: 4px;
+        position: absolute;
+        background-color: #F4511E;
+        left:50%;
+        margin-left: -80px;
+        top: 130px;
+    }
+
+    & p{
+        display: block;
+        margin: 20px auto !important;
+        max-width: 544px;
+    }
+}
+
+
+
+.fa-bars{
+    font-size: 25px;
+    color: #554948;
+}
+
+.fa-mouse{
+    font-size: 26px;
+}
+
+.progress{
+    height: 3px;
+    margin: 10px 30px;
+    width: 400px;
+    background-color: #fff;
+}
+
+.progress-bar{
+    background-color: #E84C3D;
+}
+
+
+
+.header{
+
+    &__link{
+        width: 100%;
+    }
+
+    &__top{
+
+        .navbar{
+            z-index: 1;
+        }
+
+         
+
+        .nav-item a{
+            color: #E84C3D;
+            font-weight: bold;
+        }
+        .mySearch{
+            margin: 0 auto;
+        }
+    }
+    &__body{
+        background-color: @headerBgClr;
+    }
+
+    &__title{
+       padding: 242px 0 250px;
+    }
+
+    &__title span{
+        font-size: 36px;
+        letter-spacing: @bigLetterSpacing;
+        font-family: MyWebFont;
+    }
+
+
+
+    &__footer{ 
+        padding: 0 0 34px;
+        .footer__icon{
+            margin-bottom: 14px;
+        }
+        span{
+            font-size: 12px;
+            font-family: 'Roboto', sans-serif;
+            font-weight:bold;
+        }
+    }
+}
+
+
+.about {
+    color: @blackTextColor;
+
+    &__title p{
+        margin: 20px 0 0 ;
+    }
+
+    &__body{
+        padding: 41px 0 88px;
+    }
+
+    &__item{
+        background-color: @itemBgClr;
+        max-width: 321px;
+        margin: 10px auto;
+        
+    }
+
+    &__item i{
+        padding-top: 29px;
+        font-size: 60px;
+        color: #EBEBEB;
+        text-shadow: 2px 2px #F15324;
+    }
+    &__item h3{
+        padding-top: 22px;
+    }
+    &__item p{
+        padding: 11px 0 17px;
+    }
+
+    .scenes{
+        &__info{
+            background-color: #171F23;
+            color: @WhiteTextColor;
+            padding: 50px 20px 20px;
+            
+        }
+
+        &__video{
+            padding: 0;
+            margin: 0 0 -7px 0;
+        }
+
+        & video{
+            width: 100%;
+        }
+    }
+}
+
+.works{
+    min-height: 600px;
+    &__title{
+        color: @blackTextColor;
+    }
+
+    .nav-link{
+        color: black !important;
+    
+        background:linear-gradient(#E64E40,#E64E40) 50% 100% no-repeat;
+        background-size:0 1px;
+        transition:all 250ms ease 0s;
+        text-decoration:none;
+
+        &:hover{
+            background-size:100% 1px;
+        }
+        
+    }
+
+    .fa-chevron-left,
+    .fa-chevron-right{
+    font-size: 25px;
+    color: black;
+    padding: 5px 30px;
+    }
+
+    .carousel-indicators{
+        bottom: -30px;
+    }
+}
+
+.whoWeAre{
+
+    &__title{
+        color: @blackTextColor;
+    }
+
+    .employee{
+        margin: 10px 0 10px;
+        color: @blackTextColor;
+        height: 437px;
+        width: 100%;
+        background-color: @itemBgClr;
+        display: block;
+        border:1px solid @itemBgClr;
+        &__photo,
+        &__photo2,
+        &__photo3{
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin: 70px auto 30px;
+        }
+        &__photo{
+            background: url('../img/picasso-femmes-dalger-crop.jpg') right center / cover;
+        }
+        &__photo2{
+            background: url('../img/john-wick.jpeg') right center / cover;
+        }
+        &__photo3{
+            background: url('../img/Yagami.jpg') center / cover;
+
+        } 
+    }
+
+    .employee__skills{
+        margin: 10px 0 10px;
+        color: @blackTextColor;
+        height: 437px;
+        width: 100%;
+        background-color: @itemBgClr;
+        display: block;
+        border:1px solid @itemBgClr;
+        text-align: left;
+        padding: 120px 20px 0;
+        & h5{
+            width: 110px;
+        }
+
+        .progress-bar__wrapper{
+            display: flex;
+        }
+    }
+}
+
+
+.gradient {
+
+    @keyframes background {
+        0% {
+            background-position: 0 50%;
+        }
+    
+        50% {
+            background-position: 50% 100%;
+        }
+    
+        100% {
+            background-position: 0 50%;
+        }
+    
+      }
+
+    margin: 10px 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+
+    & div {
+        width: 100%;
+        height: 200px;
+        background: linear-gradient(45deg,#000,rgb(138, 138, 138), #000, yellow);
+        background-position: 0 0;
+        animation: background 12s infinite ease;
+        background-size: 130% 130%;
+      }
+}
+
+
+.features{
+    background-color: @headerBgClr;
+    color: @WhiteTextColor;
+    min-height: 700px;
+    
+
+    & .row{
+       margin: 90px 0;
+    }
+
+    .feature{
+        background-color: rgb(20, 27, 29);
+        height: 365px;
+        width: 100%;
+        margin-bottom: 10px;
+        padding: 50px 0 20px;
+
+        &__icon{
+            font-size: 50px;
+            text-shadow: @shadow;
+            color: #171F23;
+        }
+
+        &__name{
+            margin: 30px 0 10px;
+        }
+
+        &__name h4{
+            font-family: 'Courier New', Courier, monospace;
+            letter-spacing: normal;
+            font-size: 20px;
+            font-weight: 100;
+            
+        }
+
+        &__number h5{
+            font-size: 70px;
+            text-shadow: @shadow;
+            color: #171F23;
+        }
+    }
+}
+
+.blog{
+    color: @blackTextColor;
+
+    & a.btn{
+        display: none;
+    }
+}
+
+.plans{
+    background-color: @sectionClr;
+
+    .plan{
+        margin: 0 auto 10px;
+        color: #E84C3D;
+        border: 3px solid rgb(28, 38, 43);
+        height: 450px;
+        &__info{
+            background-color:rgba(14, 19, 22, .3);
+            padding: 20px 0;
+        }
+
+        &__give{
+            background-color:rgba(14, 19, 22, .7);
+            padding: 50px 0 20px;
+            color: #fff;
+            letter-spacing: @ExtrasmollLetterSpacing;
+            margin-bottom: 20px;
+        }
+        
+        &__by{
+            margin-top: 60px;
+            background-color:rgba(27, 41, 25, 0.3);
+            font-weight: bold;
+            color: #E84C3D;
+        }
+    }
+
+}
+
+.form{
+    color: @blackTextColor;
+    margin-bottom: 10px;
+
+    &__btn{
+        width: 300px;
+        background-color: #E84C3D !important;
+        color: white !important;
+    }
+}
+
+
+.footer{
+    position: relative;
+    .map{
+
+        &__btn{
+            background-color: rgba(12, 18, 21, 0.7);
+            color:#fff;
+            font-family: MyWebFont;
+            font-size: 30px;
+            letter-spacing: @smollLetterSpacing;
+        }
+
+        &__btn:active{
+            scroll-padding: 100px;    
+        }
+    }
+
+    &__bottom{
+        padding: 30px;
+        color: @blackTextColor;
+    }
+
+    .myMap{
+        width: 900px;
+        border: 1px solid red;
+    }
+}
+
+.myAAA{
+    display: block;
+    padding-top: 200px;
+}
+
+
+@media @tablet {
+   
+    .form__btn{
+        width: auto;
+    }
+
+    .employee__skills{
+        padding-top: 10px !important;
+    }
+}
+
+
+
+
+
+
