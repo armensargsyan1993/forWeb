@@ -39,6 +39,9 @@ li {
 a {
   text-transform: uppercase;
 }
+i {
+  color: #F23005;
+}
 body {
   background-color: #151515;
 }
@@ -104,37 +107,50 @@ body {
 .body .container {
   display: flex;
 }
-.body .nav {
+.body .nav,
+.body .playlist {
   min-width: 200px;
   margin-top: 40px;
 }
-.body .nav ul {
+.body .nav ul,
+.body .playlist ul {
   max-width: 250px;
   width: 100%;
 }
-.body .nav ul li {
+.body .nav ul li,
+.body .playlist ul li {
   height: 60px;
 }
-.body .nav ul li a {
+.body .nav ul li a,
+.body .playlist ul li a {
   color: white;
   border-bottom: 2px solid #151515;
 }
-.body .nav ul li a:hover {
+.body .nav ul li a:hover,
+.body .playlist ul li a:hover {
   transition: 0.3s;
   color: #F23005;
   border-bottom: 2px solid #F23005;
 }
-.body .nav ul li i {
+.body .nav ul li i,
+.body .playlist ul li i {
   color: #F23005;
   margin-right: 30px;
 }
-.body .nav .statistic li {
+.body .nav .statistic,
+.body .playlist .statistic {
+  margin-top: 170px;
+}
+.body .nav .statistic li,
+.body .playlist .statistic li {
   height: 30px;
 }
-.body .nav .statistic li span {
+.body .nav .statistic li span,
+.body .playlist .statistic li span {
   color: white;
 }
-.body .nav .statistic li span:nth-child(1) {
+.body .nav .statistic li span:nth-child(1),
+.body .playlist .statistic li span:nth-child(1) {
   display: inline-block;
   max-width: 100px;
   width: 100%;
@@ -182,8 +198,50 @@ body {
   object-fit: cover;
   object-position: 0 0;
 }
+.body .images__item:hover {
+  box-shadow: 0 0 10px #F23005;
+  transition: 0.7s;
+}
 .body .images img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+.body .playlist {
+  color: white;
+}
+.body .playlist__top {
+  margin: 0 0 0 30px;
+}
+.body .playlist__top span {
+  padding: 0 0 0 30px;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+.body .playlist__body {
+  border: 1px solid #242424;
+  height: 680px;
+  box-shadow: 0 0 5px #242424;
+  overflow: scroll;
+  /* width */
+  /* Track */
+  /* Handle */
+}
+.body .playlist__body::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+.body .playlist__body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px white;
+  border-radius: 20px;
+  background: #555;
+  width: 3px;
+}
+.body .playlist__body::-webkit-scrollbar-thumb {
+  background: #151515;
+  border-radius: 20px;
+}
+.body .playlist__body::-webkit-scrollbar-corner {
+  border-radius: 50% !important;
+  background-color: #F23005 !important;
 }

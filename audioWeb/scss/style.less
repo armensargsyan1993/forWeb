@@ -2,6 +2,7 @@
 
 @siteColor: #F23005;
 @bodyColor: #151515;
+@playlistColor: #242424;
 
 
 *,
@@ -52,6 +53,10 @@ li{
 
 a{
     text-transform: uppercase;
+}
+
+i{
+    color: @siteColor;
 }
 
 body{
@@ -133,12 +138,13 @@ body{
     & .container{
         display: flex;
     }
-   & .nav {
-       min-width: 200px;
-       margin-top: 40px;
+   & .nav, .playlist {
+        min-width: 200px;
+        margin-top: 40px;
         & ul{
             max-width: 250px;
             width: 100%;
+            
 
             & li{
                 height: 60px;
@@ -162,6 +168,7 @@ body{
         }
 
         & .statistic{
+            margin-top: 170px;
             & li{
                 height: 30px;
                 & span{
@@ -223,6 +230,10 @@ body{
                 }
 
             }
+            &:hover{
+                box-shadow: 0 0 10px @siteColor;
+                transition: .7s;
+            }
         }
 
         & img{
@@ -231,4 +242,58 @@ body{
             object-fit: cover;
         }
     }
+
+    .playlist{
+        color: white;
+        &__top{
+            margin: 0 0 0 30px;
+            & span {
+                padding: 0 0 0 30px;
+                font-size: 16px;
+                text-transform: uppercase;
+            }
+        }
+
+        &__body{
+            border: 1px solid @playlistColor;
+            height: 680px;
+            box-shadow: 0 0 5px @playlistColor;
+            overflow: scroll;
+
+            /* width */
+            &::-webkit-scrollbar {
+                width: 10px;
+                height: 10px;
+            }
+            
+            
+            /* Track */
+            &::-webkit-scrollbar-track {
+                box-shadow: inset 0 0 5px white;
+                border-radius: 20px;
+                background: #555;
+                width: 3px;
+                
+            }
+            /* Handle */
+            &::-webkit-scrollbar-thumb {
+                background: @bodyColor;
+                border-radius: 20px;
+            }
+
+            &::-webkit-scrollbar-corner{
+                border-radius: 50% !important;
+                background-color: @siteColor !important;
+
+            }
+        }
+    }
 }
+
+
+
+
+
+
+
+
