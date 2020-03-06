@@ -101,17 +101,28 @@ body {
   color: white;
   display: block;
 }
-.nav ul {
+.body {
+  display: flex;
+}
+.body .nav {
+  margin-top: 100px;
+}
+.body .nav ul {
   max-width: 250px;
   width: 100%;
 }
-.nav ul li {
-  padding: 20px 0;
+.body .nav ul li {
+  height: 80px;
 }
-.nav ul li a {
+.body .nav ul li a {
   color: white;
 }
-.nav ul li i {
+.body .nav ul li a:hover {
+  transition: 0.3s;
+  font-size: 18px;
+  color: #F23005;
+}
+.body .nav ul li i {
   color: #F23005;
   margin-right: 30px;
 }
