@@ -55,12 +55,28 @@ a{
     text-transform: uppercase;
 }
 
+button{
+    border: none;
+    background-color: inherit;
+    cursor: pointer;
+}
+
+button:active i{
+    color: white;
+}
+
+button:hover i {
+    box-shadow: 0 0 5px white;
+}
+
 i{
     color: @siteColor;
 }
 
 body{
     background-color: @bodyColor;
+    font-family: 'Inconsolata', monospace;
+    font-weight: 700;
 }
 
 .container{
@@ -78,7 +94,7 @@ body{
     }
 
     & .search{
-        height: 70px;
+        height: 65px;
         max-width: 300px;
         width: 100%;
 
@@ -287,6 +303,26 @@ body{
 
             }
         }
+    }
+}
+
+
+.footer{
+    background-color: black;
+    & .container{
+        height: 65px;
+        display: flex;
+        align-items: center;
+    }
+
+    .trackName{
+        max-width: 210px;
+        width: 100%;
+    }
+
+    & i{
+        font-size: 20px;
+        padding: 0 3px;
     }
 }
 

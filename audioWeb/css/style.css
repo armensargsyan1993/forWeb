@@ -39,11 +39,24 @@ li {
 a {
   text-transform: uppercase;
 }
+button {
+  border: none;
+  background-color: inherit;
+  cursor: pointer;
+}
+button:active i {
+  color: white;
+}
+button:hover i {
+  box-shadow: 0 0 5px white;
+}
 i {
   color: #F23005;
 }
 body {
   background-color: #151515;
+  font-family: 'Inconsolata', monospace;
+  font-weight: 700;
 }
 .container {
   width: 100%;
@@ -58,7 +71,7 @@ body {
   align-items: center;
 }
 .header .search {
-  height: 70px;
+  height: 65px;
   max-width: 300px;
   width: 100%;
 }
@@ -244,4 +257,20 @@ body {
 .body .playlist__body::-webkit-scrollbar-corner {
   border-radius: 50% !important;
   background-color: #F23005 !important;
+}
+.footer {
+  background-color: black;
+}
+.footer .container {
+  height: 65px;
+  display: flex;
+  align-items: center;
+}
+.footer .trackName {
+  max-width: 210px;
+  width: 100%;
+}
+.footer i {
+  font-size: 20px;
+  padding: 0 3px;
 }
