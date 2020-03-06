@@ -72,7 +72,7 @@ body{
     }
 
     & .search{
-        height: 50px;
+        height: 70px;
         max-width: 300px;
         width: 100%;
 
@@ -83,7 +83,7 @@ body{
             height: 1px;
             background-color:white;
             position: absolute;
-            bottom: 10px;
+            bottom: 20px;
             left: 20px;
         }
     }
@@ -133,7 +133,8 @@ body{
         display: flex;
     }
    & .nav {
-       margin-top: 100px;
+       min-width: 200px;
+       margin-top: 40px;
         & ul{
             max-width: 250px;
             width: 100%;
@@ -161,13 +162,39 @@ body{
     & .images{
         display: flex;
         flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 30px;
 
+        & .news{
+            max-width: 500px;
+            text-align: center;
+            position: relative;
+
+            &:after{
+                content: 'top news in the world of music';
+                text-transform: uppercase;
+                font-size: 50px ;
+                position: absolute;
+                max-width: 500px;
+                width: 100%;
+                top: -70px;
+                left: -1px;
+            }
+            
+               & h1{
+                color: @siteColor;
+                font-size: 50px;
+                line-height: none;
+                margin: -70px 0 0;
+                padding: 0;
+                text-transform: uppercase;
+                font-weight: normal;
+                }
+            }
         &__item{
-            display: flex;
-            justify-content: space-between;
-            display: block;
-            width: 20%;
+            width: 25%;
             height: 200px;
+            padding: 10px;
             
             &_big{
                 width: 100%;
@@ -185,8 +212,6 @@ body{
             width: 100%;
             height: 100%;
             object-fit: cover;
-            
-
         }
     }
 }
