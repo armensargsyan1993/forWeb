@@ -129,7 +129,9 @@ body{
 
 
 .body{
-    display: flex;
+    & .container{
+        display: flex;
+    }
    & .nav {
        margin-top: 100px;
         & ul{
@@ -153,6 +155,38 @@ body{
                     margin-right: 30px;
                 }
             }
+        }
+    }
+
+    & .images{
+        display: flex;
+        flex-wrap: wrap;
+
+        &__item{
+            display: flex;
+            justify-content: space-between;
+            display: block;
+            width: 20%;
+            height: 200px;
+            
+            &_big{
+                width: 100%;
+                height: 260px;
+
+                & img{
+                    object-fit: cover;
+                    object-position: 0 0;
+                }
+
+            }
+        }
+
+        & img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            
+
         }
     }
 }

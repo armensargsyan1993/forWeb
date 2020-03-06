@@ -101,7 +101,7 @@ body {
   color: white;
   display: block;
 }
-.body {
+.body .container {
   display: flex;
 }
 .body .nav {
@@ -125,4 +125,28 @@ body {
 .body .nav ul li i {
   color: #F23005;
   margin-right: 30px;
+}
+.body .images {
+  display: flex;
+  flex-wrap: wrap;
+}
+.body .images__item {
+  display: flex;
+  justify-content: space-between;
+  display: block;
+  width: 20%;
+  height: 200px;
+}
+.body .images__item_big {
+  width: 100%;
+  height: 260px;
+}
+.body .images__item_big img {
+  object-fit: cover;
+  object-position: 0 0;
+}
+.body .images img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
