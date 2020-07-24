@@ -25,7 +25,9 @@ const optimization = () => {
 }
 //паттерны webpack => [...]
 //[name](имя файла)[hash](праизвольный хеш)
-const fileName = (ext) => isDev ? `[name].${ext}` : `[name].[hash].${ext}`
+const fileName = (ext) => {
+    return isDev ? `${ext}/[name].${ext}` : `${ext}/[name].[hash].${ext}`
+}
 
 const cssLoaders = (opt) => {
     const loaders = [
