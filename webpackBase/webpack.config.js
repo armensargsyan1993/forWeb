@@ -58,7 +58,7 @@ module.exports = {
     //точка выхода
     output: {
         filename: fileName('js'),
-        path: path.resolve(__dirname,'dist')
+        path: path.resolve('../onlineStore','dist')
     },
     //если отсутствует разширение искать такое
     resolve:{
