@@ -1,0 +1,12 @@
+$brdRad:15%;
+.box2{
+    width: 50px;
+    height: 50px;
+    border-radius: $brdRad;
+    background-color: red;
+
+    h2{
+        text-align: center;
+        color: yellow;
+    }
+}
