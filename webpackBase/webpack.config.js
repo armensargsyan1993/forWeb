@@ -53,7 +53,7 @@ module.exports = {
     //входная точка
     entry: {
         main: ['@babel/polyfill','./index.js'],
-        analytics: './js/analytics.js'
+        // analytics: './js/analytics.js'
     },
     //точка выхода
     output: {
@@ -65,8 +65,8 @@ module.exports = {
         extensions:['.js','.json','.png'],
         //создаем свои пути к файлу 
         alias: {
-            '@' : path.resolve(__dirname,'src/js'),
-            '@my':path.resolve(__dirname,'src/a')
+            // '@' : path.resolve(__dirname,'src/js'),
+            // '@my':path.resolve(__dirname,'src/a')
         }
     },
     //оптимизирует чтобы при импорте и использовании
@@ -89,7 +89,7 @@ module.exports = {
             patterns: [
                 {
                     from: path.resolve(__dirname, './src/components/img/test.png'),
-                    to: path.resolve(__dirname, 'dist'),
+                    to: path.resolve('../onlineStore', 'dist'),
                 }
             ]
         }),
