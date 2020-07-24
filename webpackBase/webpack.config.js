@@ -60,7 +60,7 @@ module.exports = {
     //точка выхода
     output: {
         filename: fileName('js'),
-        path: path.resolve('../webSiteOnlineStore','dist')
+        path: path.resolve(__dirname,'dist')
     },
     //если отсутствует разширение искать такое
     resolve:{
@@ -91,7 +91,7 @@ module.exports = {
             patterns: [
                 {
                     from: path.resolve(__dirname, './src/components/img/test.png'),
-                    to: path.resolve('../webSiteOnlineStore', 'dist'),
+                    to: path.resolve(__dirname, 'dist'),
                 }
             ]
         }),
