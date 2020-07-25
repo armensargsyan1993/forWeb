@@ -1,1 +1,1 @@
-import './components/fonts/fonts.scss'
+import './styles/sass/style.scss'
