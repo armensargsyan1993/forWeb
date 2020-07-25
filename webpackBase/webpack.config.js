@@ -26,6 +26,7 @@ const optimization = () => {
 //паттерны webpack => [...]
 //[name](имя файла)[hash](праизвольный хеш)
 const fileName = (ext) => {
+  
     return isDev ? `${ext}/[name].${ext}` : `${ext}/[name].[hash].${ext}`
 }
 
@@ -55,7 +56,6 @@ module.exports = {
     //входная точка
     entry: {
         main: ['@babel/polyfill','./index.js'],
-        // analytics: './js/analytics.js'
     },
     //точка выхода
     output: {
@@ -67,8 +67,8 @@ module.exports = {
         extensions:['.js','.json','.png'],
         //создаем свои пути к файлу 
         alias: {
-            // '@' : path.resolve(__dirname,'src/js'),
-            // '@my':path.resolve(__dirname,'src/a')
+            '@' : path.resolve(__dirname,'src/js'),
+            '@my':path.resolve(__dirname,'src/a')
         }
     },
     //оптимизирует чтобы при импорте и использовании
@@ -126,11 +126,20 @@ module.exports = {
             },
             {
                 test:/\.(png|jpg|svg|gif)$/,
-                use:['file-loader']
+                loader: 'file-loader',
+                options: {
+                    publicPath:'../',
+                    name: '[path][name].[ext]',
+                },
             },
             {
                 test:/\.(ttf|woff|woff2|eot)$/,
-                use:['file-loader']
+                loader: 'file-loader',
+                options: {
+                    publicPath:'../',
+                    name: '[path][name].[ext]',
+                }
+               
             },
             {
                 test: /\.js$/, 

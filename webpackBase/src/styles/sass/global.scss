@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic');
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,regular,500,700,900,');
 @import url('https://fonts.googleapis.com/css?family=Caveat:regular,700');
 @import url('https://fonts.googleapis.com/css2?family=Lexend+Zetta&display=swap');
 
@@ -9,8 +9,11 @@ $leZet: 'Lexend Zetta';
 //backgroundColor
 $bgColor: #00A0B4;
 //fontSize
-$fsz: 16px;
-
+$fontSize: 16px;
+//width
+$maxWidth:1400px;
+$minWidth:320px;
+$container: 1141px;
 /*Zeroing*/
 *{
 	padding: 0;
@@ -48,5 +51,11 @@ ul li{list-style: none;}
 img{vertical-align: top;}
 
 body{
-    background-color: $bgColor;
+	// font-family: $rob;
+}
+
+.container{
+	max-width: $container;
+	padding: 0 20px;
+	margin: 0 auto;
 }
