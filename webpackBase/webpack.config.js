@@ -92,6 +92,10 @@ module.exports = {
                 {
                     from: path.resolve(__dirname, './src/components/img/test.png'),
                     to: path.resolve(__dirname, 'dist'),
+                },
+                {
+                    from: path.resolve(__dirname, './src/components'),
+                    to: path.resolve(__dirname, 'dist/components'),
                 }
             ]
         }),
@@ -159,3 +163,6 @@ module.exports = {
         ]
     }
 }
+// if (isDev) {
+//     module.exports.module.rules[0].use[0].options = { publicPath: './' };
+// }
