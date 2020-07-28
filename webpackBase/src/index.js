@@ -1,5 +1,5 @@
+import './js/hexagon.js'
+import './js/owlCarousel.js'
 import './styles/sass/style.scss'
 
-/* let letter = document.querySelector('use')
-letter.style.fill = 'yellow'
-letter.style.color = 'red' */
+

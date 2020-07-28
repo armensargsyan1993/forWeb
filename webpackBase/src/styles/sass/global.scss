@@ -1,19 +1,27 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:300,regular,500,700,900,');
-@import url('https://fonts.googleapis.com/css?family=Caveat:regular,700');
-@import url('https://fonts.googleapis.com/css2?family=Lexend+Zetta&display=swap');
 
 //fonts
-$rob:'Roboto';
-$cav:'Caveat';
-$leZet: 'Lexend Zetta';
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500;600;700&display=swap');
+
+
+//fonts
+$ral:'Raleway', sans-serif;
+$lato:'Lato', sans-serif;
 //backgroundColor
-$bgColor: #00A0B4;
+$bgColor: #FFF;
+$txtColor: #505050;
 //fontSize
 $fontSize: 16px;
 //width
 $maxWidth:1400px;
 $minWidth:320px;
-$container: 1141px;
+$container: 1184px;
+
+
+//owl carousel
+.owl-item {height: 0;} 
+.owl-item.active {height: auto;}
+
 /*Zeroing*/
 *{
 	padding: 0;
@@ -24,6 +32,7 @@ $container: 1141px;
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
+	text-decoration: none;
 }
 :focus,:active{outline: none;}
 a:focus,a:active{outline: none;}
@@ -51,11 +60,33 @@ ul li{list-style: none;}
 img{vertical-align: top;}
 
 body{
-	// font-family: $rob;
+	font-family: 'Lato',serif;
+	font-weight: 900;
+	color: $txtColor;
+}
+a{
+	color: white;
+	display: block;
+}
+button{
+
+	display: inline-block;
 }
 
 .container{
 	max-width: $container;
-	padding: 0 20px;
+	width: 100%;
+	padding: 0 40px;
 	margin: 0 auto;
+}
+
+.hexagon {
+    width: 100px;
+    height: 252px;
+}
+.hexagon svg {
+    width: 100%;
+    height: 100%;
+    stroke-width: 3px;
+    stroke: #000;
 }

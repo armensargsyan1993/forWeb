@@ -1,0 +1,53 @@
+@mixin bgImage($url) {
+    background:url('../../components/img/header/' + $url) 50%/100% auto no-repeat;
+}
+
+.header{
+    &-top{
+        padding:29px 0;
+        background-color: #08070C;
+        & .container{
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+    &-nav ul{
+        display: flex;
+        & li{
+            text-transform: uppercase;
+            padding-left: 25px;
+        }
+    }
+    &-inner{
+        &__content{
+            height: 500px;
+        }
+        &__title{
+            text-align: center;
+            border: 1px solid red;
+            & h1{
+                padding: 184px 0 46px;
+            }
+            .buttons-group{
+                padding-top: 49px;
+                border: 1px solid red;
+            }
+            .buttons-group__first{
+                background-color: red;
+            }  
+        }
+    }
+}
+
+.first{
+    @include bgImage('first.png')
+}
+
+.second{
+    @include bgImage('second.jpg')
+}
+
+.third{
+    @include bgImage('third.gif')
+}
+

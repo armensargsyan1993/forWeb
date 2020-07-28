@@ -1,4 +1,5 @@
 const path = require('path')
+const webpack = require('webpack')
 const HTMLWebpackPlugin = require('html-webpack-plugin')
 const {CleanWebpackPlugin} = require('clean-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin');
@@ -68,7 +69,7 @@ module.exports = {
         //создаем свои пути к файлу 
         alias: {
             '@' : path.resolve(__dirname,'src/js'),
-            '@my':path.resolve(__dirname,'src/a')
+            '@img':path.resolve(__dirname,'./components/img')
         }
     },
     //оптимизирует чтобы при импорте и использовании
@@ -79,8 +80,8 @@ module.exports = {
     //настройка dev Server
     devServer: {
         port: 4200,
-        hot: isDev,
-        overlay:true
+        // hot: isDev,
+        overlay:true,
     },
     //карта кода(исходный код без переделок например без прогона по бабел)
     devtool: isDev ? 'source-map' : '',
@@ -89,10 +90,6 @@ module.exports = {
         //для копирования чего то куда то
         new CopyWebpackPlugin({
             patterns: [
-                {
-                    from: path.resolve(__dirname, './src/components/img/test.png'),
-                    to: path.resolve(__dirname, 'dist'),
-                },
                 {
                     from: path.resolve(__dirname, './src/components'),
                     to: path.resolve(__dirname, 'dist/components'),
@@ -111,7 +108,13 @@ module.exports = {
         // css сохраняется в отдельном файле .css
         new MiniCssExtractPlugin({
             filename: fileName('css'),
-        })
+        }),
+        //owl carousel
+        new webpack.ProvidePlugin({
+            $: 'jquery',
+            jQuery: 'jquery',
+            'window.jQuery': 'jquery'
+          }),
     ],
     //базово webpack понимает .js и .json для остальных разширений нужны loader
     module: {
