@@ -3,13 +3,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500;600;700&display=swap');
 
+@import url('../css/fontello.css');
+
 
 //fonts
 $ral:'Raleway', sans-serif;
+$ral500:500;
+$ral600:600;
+$ral700:700;
+
 $lato:'Lato', sans-serif;
+$lato300:300;
+$lato400:400;
+$lato700:700;
+$lato900:900;
+
 //backgroundColor
-$bgColor: #FFF;
+$bgLightColor: #FFF;
+$bgDarkColor: #272727;
 $txtColor: #505050;
+$customTextColor: #ff0036;
 //fontSize
 $fontSize: 16px;
 //width
@@ -21,6 +34,10 @@ $container: 1184px;
 //owl carousel
 .owl-item {height: 0;} 
 .owl-item.active {height: auto;}
+.owl-nav{
+	position: absolute;
+	top: 44%;
+}
 
 /*Zeroing*/
 *{
@@ -61,7 +78,6 @@ img{vertical-align: top;}
 
 body{
 	font-family: 'Lato',serif;
-	font-weight: 900;
 	color: $txtColor;
 }
 a{
@@ -69,10 +85,32 @@ a{
 	display: block;
 }
 button{
-
 	display: inline-block;
+	color: white;
+	font-family: $ral;
+	font-weight: $ral500;
+	font-size: 20px;
+	text-transform: uppercase;
+	line-height: 1.2;
+	padding: 17px 36px;
+}
+h1{
+	font-size: 30px;
 }
 
+h1,h2{
+	line-height: 1.2;
+	font-family: $ral;
+	font-weight: $ral700;
+}
+
+p{
+	font-family: $lato;
+	font-weight: $lato400;
+	line-height: 22px;
+	color: $txtColor;
+	font-size: 16px;
+}
 .container{
 	max-width: $container;
 	width: 100%;

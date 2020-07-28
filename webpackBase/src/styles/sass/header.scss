@@ -1,5 +1,5 @@
 @mixin bgImage($url) {
-    background:url('../../components/img/header/' + $url) 50%/100% auto no-repeat;
+    background:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('../../components/img/header/' + $url) center/cover no-repeat;
 }
 
 .header{
@@ -20,21 +20,31 @@
     }
     &-inner{
         &__content{
-            height: 500px;
+            height: 630px;
         }
         &__title{
             text-align: center;
-            border: 1px solid red;
             & h1{
+                color: white;
                 padding: 184px 0 46px;
+                span{
+                    color: $customTextColor;
+                }
+            }
+            & p{
+                color: white;
+                max-width: 1021px;
             }
             .buttons-group{
                 padding-top: 49px;
-                border: 1px solid red;
-            }
-            .buttons-group__first{
-                background-color: red;
-            }  
+                &>*:first-child{
+                    background-color: $customTextColor;
+                    margin-right: 30px;
+                }
+                &>*:last-child{
+                    background-color: black;
+                }
+            } 
         }
     }
 }
