@@ -33,7 +33,7 @@
                     <div class="container">
                         <div class="header-inner__title">
                                 <div class="title">
-                                    <h1>why <span>creativia ?</span></h1>
+                                    <h1>why <span class="custom-text">creativia ?</span></h1>
                                 </div>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                                 Ut et dolor justo. Phasellus eu ligula ac nisl volutpat 
@@ -90,8 +90,71 @@
     </header>
     <section class="about">
         <div class="container">
-            <div class="title">
-                <h1>why <span>creativia ?</span></h1>
+            <div class="about-top">
+                <div class="about-top__title title">
+                    <h1>why <span class="custom-text">creativia ?</span></h1>
+                </div>
+                <div class="about-top__text">
+                    <p>Lorem ipsum dolor sit amet, consectetur <span class="custom-text">adipiscing elit</span>. Integer sed magna vel velit dignissim luctus eu in urna. Dapibus egestas turpis.</p>
+                </div>
+            </div>
+            <div class="about-inner">
+                <div class="about-inner__accardion">
+                    <h1>CSS + HTML only Accordion Element</h1>
+                    <ul>
+                    <li>
+                        <input type="checkbox" checked>
+                        <i></i>
+                        <h2>Languages Used</h2>
+                        <p>This page was written in HTML and CSS. The CSS was compiled from SASS. I used Normalize as my CSS reset and -prefix-free to save myself some headaches. I haven't quite gotten the hang of Slim for compiling into HTML, but someday I'll use it since its syntax compliments that of SASS. Regardless, this could all be done in plain HTML and CSS.</p>
+                    </li>
+                    <li>
+                        <input type="checkbox" checked>
+                        <i></i>
+                        <h2>How it Works</h2>
+                        <p>Using the sibling and checked selectors, we can determine the styling of sibling elements based on the checked state of the checkbox input element. One use, as demonstrated here, is an entirely CSS and HTML accordion element. Media queries are used to make the element responsive to different screen sizes.</p>
+                    </li>
+                    <li>
+                        <input type="checkbox" checked>
+                        <i></i>
+                        <h2>Points of Interest</h2>
+                        <p>By making the open state default for when :checked isn't detected, we can make this system accessable for browsers that don't recognize :checked. The fallback is simply an open accordion. The accordion can be manipulated with Javascript (if needed) by changing the "checked" property of the input element.</p>
+                    </li>
+                    </ul>
+                </div>
+                <div class="about__inner_photos">
+                    <div class="hexagon"><p>dasgsdg</p></div>
+                    <div class="hexagon"></div>
+                    <div class="hexagon"></div>
+                </div>
+            </div>
+            <div class="about-bottom">
+                <div class="cards-group">
+                    <div class="cards-group__card">
+                        <div class="hexagon"></div>
+                        <h3>FLAT DESIGN</h3>
+                        <p>Lorem ipsum dolor sit amet cras vitae sodales ac nec prellentesque vivamus
+eget mauris fusce sit amet</p>
+                    </div>
+                    <div class="cards-group__card">
+                        <div class="hexagon"></div>
+                        <h3>RETINA READY</h3>
+                        <p>Lorem ipsum dolor sit amet cras vitae sodales ac nec prellentesque vivamus
+eget mauris fusce sit amet</p>
+                    </div>
+                    <div class="cards-group__card">
+                        <div class="hexagon"></div>
+                        <h3>RESPONSIVE</h3>
+                        <p>Lorem ipsum dolor sit amet cras vitae sodales ac nec prellentesque vivamus
+eget mauris fusce sit amet</p>
+                    </div>
+                    <div class="cards-group__card">
+                        <div class="hexagon"></div>
+                        <h3>Clean & useful</h3>
+                        <p>Lorem ipsum dolor sit amet cras vitae sodales ac nec prellentesque vivamus
+eget mauris fusce sit amet</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>                   
