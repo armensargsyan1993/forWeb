@@ -132,7 +132,7 @@ module.exports = {
                 use: cssLoaders('sass-loader')
             },
             {
-                test:/\.(png|jpg|svg|gif)$/,
+                test:/\.(png|jpg|svg|gif|webp)$/,
                 loader: 'file-loader',
                 options: {
                     publicPath:'../',
