@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500;600;700&display=swap');
 
-@import url('../css/fontello.css');
+@import url('../css/fontello/fontello.css');
 
 
 //fonts
@@ -32,6 +32,9 @@ $container: 1184px;
 $darkTittleColor: #262626;
 $whiteTittleColor: #fff;
 
+//transition
+$transit:all 1s ease;
+
 
 //owl carousel
 .owl-item {height: 0;} 
@@ -46,12 +49,15 @@ $whiteTittleColor: #fff;
 	top: 43%;
 	font-size: 36px;
 	button{
+		transition: all 1s ease;
 		width: 1px;
 		height: 0;
 		position: absolute;
 		&>*{
+			transition: all 1s ease;
 			width: 1px;
 			height: 0;
+			color: $txtColor;
 		}
 	}
 	button>*:hover{
@@ -128,6 +134,14 @@ h1,h2{
 	font-family: $ral;
 	font-weight: $ral700;
 }
+h3{
+	font-family: $ral;
+	font-size: 20px;
+	line-height: 1.2;
+	font-weight: $ral500;
+	text-transform: uppercase;
+	color: $txtColor;
+}
 
 p{
 	font-family: $lato;
@@ -135,6 +149,10 @@ p{
 	line-height: 22px;
 	color: $txtColor;
 	font-size: 16px;
+}
+
+ul{
+	text-transform: uppercase;
 }
 .container{
 	max-width: $container;
@@ -151,8 +169,8 @@ p{
 }
 
 .hexagon {
-    width: 100px;
-    height: 252px;
+    max-width: 500px;
+    max-height: 552px;
 }
 .hexagon svg {
     width: 100%;

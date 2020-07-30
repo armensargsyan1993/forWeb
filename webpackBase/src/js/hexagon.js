@@ -42,8 +42,11 @@ const cardsGroup = {
     isEmpty:true
 }
 
+
 hexagon(aboutInnerPhotos)
 hexagon(cardsGroup)
+
+
 
 
 
