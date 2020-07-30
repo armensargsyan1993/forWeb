@@ -1,0 +1,23 @@
+.portfolio{
+    height: 100vh;
+    background-color: $bgDarkColor;
+    text-align: center;
+    h2{
+        padding-top: 30px;
+        color: $whiteTittleColor;
+    }
+    &-top{
+        margin-top: 50px;
+        overflow: hidden;
+        display: flex;
+        flex: 1;
+        flex-wrap: nowrap;
+        div{
+            min-width: 200px !important;
+        }
+    }
+    &-bottom{
+        overflow: hidden;
+
+    }
+}
