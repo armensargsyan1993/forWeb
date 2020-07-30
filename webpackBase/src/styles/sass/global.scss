@@ -29,6 +29,8 @@ $fontSize: 16px;
 $maxWidth:1400px;
 $minWidth:320px;
 $container: 1184px;
+$darkTittleColor: #262626;
+$whiteTittleColor: #fff;
 
 
 //owl carousel
@@ -103,7 +105,6 @@ img{vertical-align: top;}
 
 body{
 	font-family: 'Lato',serif;
-	color: $txtColor;
 }
 a{
 	color: white;
@@ -119,11 +120,10 @@ button{
 	line-height: 1.2;
 	padding: 17px 36px;
 }
-h1{
-	font-size: 30px;
-}
 
 h1,h2{
+	color: $darkTittleColor;
+	font-size: 30px;
 	line-height: 1.2;
 	font-family: $ral;
 	font-weight: $ral700;

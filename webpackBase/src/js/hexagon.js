@@ -2,21 +2,23 @@
 function hexagon(obj){
     const block = document.querySelector(`.${obj.block}`)
     const hexagonArr = block.querySelectorAll('.hexagon')
-    let fillInner = null
+    let fillInner = 'none'
     let innerImgTag = ''
     for(let key of hexagonArr){
         let hr = obj.href[0]
         obj.href[0] = obj.url + obj.href[0]
-        if(!hr.includes('.')){
-            fillInner = hr
-        } else{
-            fillInner = `url(#${hr})`
-            innerImgTag = `<defs>
-            <pattern id="${hr}" patternUnits="userSpaceOnUse" width="100%" height="100%">
-            <image xlink:href=${obj.href[0]} />
-            </pattern>
-            </defs>` 
-        } 
+        if(!obj.isEmpty){
+            if(!hr.includes('.')){
+                fillInner = hr
+            } else{
+                fillInner = `url(#${hr})`
+                innerImgTag = `<defs>
+                <pattern id="${hr}" patternUnits="userSpaceOnUse" width="100%" height="100%">
+                <image width="100%" xlink:href=${obj.href[0]} />
+                </pattern>
+                </defs>` 
+            } 
+        }
         key.insertAdjacentHTML('beforeend',`
         <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 252">
             ${innerImgTag}
@@ -28,8 +30,9 @@ function hexagon(obj){
 }
 const aboutInnerPhotos = {
     url:'./components/img/about/',
-    block: 'about__inner_photos',
-    href: ['red','2.png','3.png'],
+    block: 'about-inner__photos',
+    href: ['2.png','1.png','3.png'],
+    isEmpty:false
 }
 
 hexagon(aboutInnerPhotos)
