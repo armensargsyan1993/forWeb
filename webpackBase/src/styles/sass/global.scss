@@ -141,11 +141,13 @@ p{
 	width: 100%;
 	padding: 0 40px;
 	margin: 0 auto;
-	text-align: center;
 }
 
 .custom-text{
 	color: $customTextColor;
+}
+.title{
+	text-align: center;
 }
 
 .hexagon {

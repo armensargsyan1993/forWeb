@@ -5,9 +5,9 @@ function hexagon(obj){
     let fillInner = 'none'
     let innerImgTag = ''
     for(let key of hexagonArr){
-        let hr = obj.href[0]
-        obj.href[0] = obj.url + obj.href[0]
         if(!obj.isEmpty){
+            let hr = obj.href[0]
+            obj.href[0] = obj.url + obj.href[0]
             if(!hr.includes('.')){
                 fillInner = hr
             } else{
@@ -25,7 +25,9 @@ function hexagon(obj){
             <path fill= ${fillInner} d="M75.173,251.959L0,126.152l74.827-126l150-0.193L300,125.766l-74.827,126L75.173,251.959z"/>
         </svg>
     `)
-    obj.href.splice(0,1)
+    if(!obj.isEmpty){
+        obj.href.splice(0,1)
+    }
     }
 }
 const aboutInnerPhotos = {
@@ -35,7 +37,13 @@ const aboutInnerPhotos = {
     isEmpty:false
 }
 
+const cardsGroup = {
+    block: 'cards-group',
+    isEmpty:true
+}
+
 hexagon(aboutInnerPhotos)
+hexagon(cardsGroup)
 
 
 
