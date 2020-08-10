@@ -24,18 +24,23 @@
             display: flex;
             align-items: center;
             .hexagon{
-                
+                margin-right: 1%;
                 position: absolute;
                 top: 0;
                 right: 0;
                 height: 250px;
-                width: 426px;
+                svg{
+                }
                 &:nth-child(1){
-                    right: 70px;
+                    left: 0;
+                    height: 250px;
                 }
                 &:nth-child(2){
                     height: 300px;
                     top: -25px;
+                    svg{
+                        width: 350px;
+                    }
                     image{
                         height: 100%;
                         width: 370px;
@@ -43,7 +48,7 @@
                     z-index: 2;
                 }
                 &:nth-child(3){
-                    right: -70px;
+                    right: -10%;
                 }
                 
                 path{
@@ -87,7 +92,6 @@
                 }
             }
             &__card {
-                
                 text-align: center;
                 h3{
                     padding: 35px 0 27px;
