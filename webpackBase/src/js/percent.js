@@ -1,6 +1,5 @@
 const percentSpan = document.querySelectorAll('.percent')
 const progress = document.querySelectorAll('.progress__value')
-const timerTest = document.querySelectorAll('.timer-test')
 //percentSpan
 let timerMs = 0
 class Calc {
@@ -35,8 +34,8 @@ function compilePercent(ms) {
         e.style.animation = `progress ${percent[i] * ms + (ms * 2.5)}ms forwards`
     })
 }
-body.addEventListener('scroll',e => {
-    console.log(document.offsetWidth);
-})
-
+// document.addEventListener('scroll',e => {
+//     let val = window.scrollY
+// })
+// console.log(location.href);
 
