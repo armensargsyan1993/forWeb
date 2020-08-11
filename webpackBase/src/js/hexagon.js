@@ -42,9 +42,15 @@ const cardsGroup = {
     isEmpty:true
 }
 
+const servicesCard = {
+    block: 'services-content',
+    isEmpty: true
+}
+
 
 hexagon(aboutInnerPhotos)
 hexagon(cardsGroup)
+hexagon(servicesCard)
 
 
 

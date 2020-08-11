@@ -1,0 +1,71 @@
+.services{
+    background-color: $bgDarkColor;
+    &__title{
+        text-align: center;
+        h2{
+            color: $bgLightColor;;
+        }
+    }
+    .services-content{
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 50px;
+        justify-content: space-between;
+        &__card{
+            h3:hover+.hexagon path{
+                fill: $customTextColor;
+            }
+            h3:hover+.hexagon i {
+                color: white;
+            }
+            .hexagon{
+                cursor: pointer;
+                path{
+                    transition: $transit;
+                    fill: white;
+                }
+                transition: $transit;
+                width: 50px;
+                position: relative;
+                top: -35px;
+                &:hover path{
+                    fill: $customTextColor;
+                }
+                &:hover i{
+                    color: white;
+                }
+                i{  
+                    transition: $transit;
+                    margin: 0;
+                    padding: 0;
+                    position: absolute;
+                    font-size: 24px;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50% , -50%);
+                    cursor: pointer;
+                }
+            }
+            p{
+                cursor: pointer;
+                background-color: $cardBgClr;
+                width: 530px;
+                height: 121px;
+                margin: 0 0 40px;
+                transition: $transit;
+                padding: 25px 30px;
+            }
+            h3{
+                cursor: pointer;
+                color: #fff;
+                margin-left: 70px;
+
+            }
+            p:hover{
+                background-color: $cardBgHoverClr;
+                color: #fff;
+            }
+        }
+    }
+}

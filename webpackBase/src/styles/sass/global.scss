@@ -23,6 +23,8 @@ $bgLightColor: #FFF;
 $bgDarkColor: #272727;
 $txtColor: #505050;
 $customTextColor: #ff0036;
+$cardBgClr:#343434;
+$cardBgHoverClr:#3d2328;
 //fontSize
 $fontSize: 16px;
 //width
@@ -125,6 +127,12 @@ button{
 	text-transform: uppercase;
 	line-height: 1.2;
 	padding: 17px 36px;
+}
+h2{
+	padding-top: 70px;
+}
+h2+p{
+	padding-top: 49px;
 }
 
 h1,h2{
