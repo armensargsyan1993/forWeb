@@ -1,0 +1,44 @@
+.my-modal{
+    position: absolute;
+    display: none;
+    height: 400px;
+    width: 475px;
+    background-color: $bgLightColor;
+    top: 80px;
+    right: 0;
+    z-index: 5000;
+    box-shadow: 0px 0px 9px 0px rgba(4,5,5,0.17);
+    transition: all 3s ease;
+    .form{
+        padding: 30px;
+        &>*:not(button){
+            display: block;
+            width: 100%;
+            border: $formBorder;
+            resize: none;
+        }
+        input{
+            margin-bottom: 10px;
+            height: 40px;
+        }
+        input,textarea{
+            padding: 10px;
+        }
+        &__btn{
+            background-color: $bgDarkColor;
+            margin-top: 20px;
+            padding: 10px 15px;
+            position: absolute;
+            right: 30px;
+            font-size: 16px;
+        }
+    }
+}
+
+.mmo{
+    opacity: 0;
+    transition: all 3s ease;
+    display: block;
+    opacity: 1;
+}
+

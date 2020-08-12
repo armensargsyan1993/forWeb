@@ -22,7 +22,7 @@
                         <li class="header-nav__link"><a href="#">team</a><span></span><span></span></li>
                         <li class="header-nav__link"><a href="#">services</a><span></span><span></span></li>
                         <li class="header-nav__link"><a href="#">Blog</a><span></span><span></span></li>
-                        <li class="header-nav__link"><a href="#">Contact</a><span></span><span></span></li>
+                        <li class="header-nav__link"><a href="#" class="modal-open">Contact</a><span></span><span></span></li>
                     </ul>
                 </nav>
             </div>
@@ -216,7 +216,7 @@
                 <svg class="progress" width="160" height="160" viewBox="0 0 120 120">
                     <circle class="progress__value" cx="60" cy="60" r="54" fill="none" stroke="#f77a52" stroke-width="1" />
                 </svg>
-                <div class="percent-block"><span class="percent"></span><span>%</span></div>
+                <div class="percent-block"><span class="percent"></span></div>
                 <h3>photoshop</h3>
                 <p>Donec luctus tortor in placerat faucibus</p>
             </div>
@@ -224,7 +224,7 @@
                 <svg class="progress" width="160" height="160" viewBox="0 0 120 120">
                     <circle class="progress__value" cx="60" cy="60" r="54" fill="none" stroke="#f77a52" stroke-width="1" />
                 </svg>
-                <div class="percent-block"><span class="percent"></span><span>%</span></div>
+                <div class="percent-block"><span class="percent"></span></div>
                 <h3>html</h3>
                 <p>Donec luctus tortor in placerat faucibus</p>
             </div>
@@ -232,7 +232,7 @@
                 <svg class="progress" width="160" height="160" viewBox="0 0 120 120">
                     <circle class="progress__value" cx="60" cy="60" r="54" fill="none" stroke="#f77a52" stroke-width="1" />
                 </svg>
-                <div class="percent-block"><span class="percent"></span><span>%</span></div>
+                <div class="percent-block"><span class="percent"></span></div>
                 <h3>php</h3>
                 <p>Donec luctus tortor in placerat faucibus</p>
             </div>
@@ -240,14 +240,34 @@
                 <svg class="progress" width="160" height="160" viewBox="0 0 120 120">
                     <circle class="progress__value" cx="60" cy="60" r="54" fill="none" stroke="#f77a52" stroke-width="1" />
                 </svg>
-                <div class="percent-block"><span class="percent"></span><span>%</span></div>
+                <div class="percent-block"><span class="percent"></span></div>
                 <h3>wordpress</h3>
                 <p>Donec luctus tortor in placerat faucibus</p>
             </div>
         </div>
     </section>
     <footer class="footer">
-
+        <div class="footer__map map">
+            <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ad40478bb55edc55aeff4f885c447e017cc1afa8ac79c366694e4c91f53e02ad0&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=true"></script>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-bottom__content">
+                <div class="footer-bottom__title">
+                    <h3>creativia</h3>
+                </div>
+                <div class="footer-bottom__subtitle">
+                    <span>design by</span>
+                </div>
+            </div>
+        </div>
     </footer>
+    <div class="my-modal">
+        <form class="form" action="#">
+            <input type="text" name="username" placeholder="username">
+            <input type="email" name="email" placeholder="email">
+            <textarea name="textarea" cols="10" rows="10"></textarea>
+            <button type="submit" class="form__btn btn">submit</button>
+        </form>
+    </div>
 </body>
 </html>

@@ -1,5 +1,7 @@
 const percentSpan = document.querySelectorAll('.percent')
 const progress = document.querySelectorAll('.progress__value')
+const percentBlock = document.querySelectorAll('.percent-block')
+let skill = document.querySelector('.skills')
 //percentSpan
 let timerMs = 0
 class Calc {
@@ -34,8 +36,16 @@ function compilePercent(ms) {
         e.style.animation = `progress ${percent[i] * ms + (ms * 2.5)}ms forwards`
     })
 }
-// document.addEventListener('scroll',e => {
-//     let val = window.scrollY
-// })
-// console.log(location.href);
 
+
+
+
+ document.addEventListener('scroll',function z(){
+    if(skill.getBoundingClientRect().y < 400){
+        compilePercent(70)
+        percentBlock.forEach(e =>{
+            e.append(document.createElement('span').innerText = '%')
+        })
+        document.removeEventListener('scroll',z)
+    }
+ })
