@@ -5,6 +5,7 @@ import './styles/sass/style.scss'
 import './js/cssEffects.js'
 import './js/percentAndProgress.js'
 import './js/modal.js'
+import './js/header.js'
 
 
 
