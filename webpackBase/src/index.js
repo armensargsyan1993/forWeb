@@ -6,6 +6,7 @@ import './js/cssEffects.js'
 import './js/percentAndProgress.js'
 import './js/modal.js'
 import './js/header.js'
+import './js/infinity.js'
 
 
 
