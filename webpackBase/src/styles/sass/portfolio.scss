@@ -1,9 +1,10 @@
 .portfolio{
-    // background-color: $bgDarkColor;
+    margin:20px 0;
+    overflow-y: scroll;
+    height: 100vh;
     text-align: center;
     h2{
-        padding-top: 30px;
-        color: $whiteTittleColor;
+        padding: 30px;
+        color: $txtColor;
     }
-
 }

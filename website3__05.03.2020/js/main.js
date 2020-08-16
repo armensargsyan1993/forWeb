@@ -49,8 +49,6 @@ function contentLoad(obj){
         $(".nav-link").removeClass('activated');
         $(this).addClass('activated')
     })
-    
-
     $('.a').click(function(e){
         $('.modern3').removeClass('active')
         $('.modern2').removeClass('active')
