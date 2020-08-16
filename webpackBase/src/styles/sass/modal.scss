@@ -6,9 +6,21 @@
     background-color: $bgLightColor;
     top: 80px;
     right: 0;
-    z-index: 5000;
+    z-index: 10000;
     box-shadow: 0px 0px 9px 0px rgba(4,5,5,0.17);
     transition: all 3s ease;
+    .close{
+        position: absolute;
+        top: 10px;
+        right: 50px;
+        background: none;
+        color: black;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        line-height: 1px;
+        font-size: 32px;
+    }
     .form{
         padding: 30px;
         &>*:not(button){
@@ -32,6 +44,7 @@
             right: 30px;
             font-size: 16px;
         }
+        
     }
 }
 
@@ -40,5 +53,24 @@
     transition: all 3s ease;
     display: block;
     opacity: 1;
+}
+
+.modal-block{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: .3;
+    background-color: gray;
+    z-index: 9999;
+}
+
+.hidden{
+    overflow-y: hidden;
+}
+
+.padding{
+    padding-right: 50px;
 }
 

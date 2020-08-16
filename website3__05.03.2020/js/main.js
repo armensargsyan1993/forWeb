@@ -1,65 +1,45 @@
 // $('.navbar-toggler-icon').css('display','none')
+class Content{
+    constructor(url){
+        this.tagId = `#contentToOtherHtml`
+        this.url = url
+    }
+}
 
+function contentLoad(obj){
+    fetch(obj.url).then(r => {
+        if(r.ok){
+            return r.text();
+        }else{
+            $(obj.tagId).html('Подключения к сети нет ')
+        }
+    }).then(html => {
+        $(obj.tagId).html(html)
+    });
+}
 
  $(document).ready(function(){  
-
-
-    $.ajax({  
-        url: "../otherPages/allProject.html",  
-        cache: false,  
-        success: function(html){  
-            $("#contentToOtherHtml").html(html);  
-        }  
-    });
+     contentLoad(new Content("../otherPages/allProject.html"))
 
     $('.link0').click(function(){  
-        $.ajax({  
-            url: "../otherPages/allProject.html",  
-            cache: false,  
-            success: function(html){  
-                $("#contentToOtherHtml").html(html);  
-            }  
-        });  
+        contentLoad(new Content("../otherPages/allProject.html")) 
     }); 
 
     $('.link1').click(function(){  
-        $.ajax({  
-            url: "../otherPages/photography.html",  
-            cache: false,  
-            success: function(html){  
-                $("#contentToOtherHtml").html(html);
-            }  
-        });  
+        contentLoad(new Content("../otherPages/photography.html")) 
     });  
       
-    $('.link2').click(function(){  
-        $.ajax({  
-            url: "../otherPages/webDesign.html",  
-            cache: false,  
-            success: function(html){  
-                $("#contentToOtherHtml").html(html);  
-            }  
-        });
+    $('.link2').click(function(){
+        contentLoad(new Content("../otherPages/webDesign.html"))
     });  
 
-    $('.link3').click(function(){  
-        $.ajax({  
-            url: "../otherPages/branding.html",  
-            cache: false,  
-            success: function(html){  
-                $("#contentToOtherHtml").html(html);  
-            }  
-        });  
+    $('.link3').click(function(){
+        contentLoad(new Content("../otherPages/branding.html"))
+
     });  
 
     $('.link4').click(function(){  
-        $.ajax({  
-            url: "../otherPages/mobileApp.html",  
-            cache: false,  
-            success: function(html){  
-                $("#contentToOtherHtml").html(html);  
-            }  
-        });  
+        contentLoad(new Content("../otherPages/mobileApp.html"))
     });  
   
       
