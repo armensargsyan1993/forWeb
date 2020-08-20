@@ -1,9 +1,10 @@
 .skills{
-    height: 550px;
+    min-height: 400px;
     &__title{
         text-align: center;
     }
     .skills-content{
+        flex-wrap: wrap;
         margin-top: 60px;
         display: flex;
         justify-content: space-around;
@@ -11,6 +12,7 @@
         text-align: center;
         &__card{
             display: flex;
+            margin-bottom: 20px;
             flex-direction: column;;
             align-items: center;
             justify-content: center;
@@ -35,7 +37,6 @@
                   .progress__value {
                     stroke-dasharray: 339.292;
                     stroke-dashoffset: 339.292;
-                    // animation: progress 5s forwards;
                   }
                   
                   @keyframes progress {

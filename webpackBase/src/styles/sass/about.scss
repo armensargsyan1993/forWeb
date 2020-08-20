@@ -1,7 +1,11 @@
 @import './accardion.scss';
 
 .about{
+    @media (max-width:777px){
+        min-height: 1000px;
+    }
     height: 100vh;
+    min-height: 900px;
     &-top{
         & p{
             font-weight: $lato700;
@@ -15,6 +19,9 @@
         &__accardion{
         }
         &__photos{
+            @media (max-width:777px){
+                display: none;
+            }
             position: relative;
             width: 100%;
             height: 200px;
@@ -56,12 +63,12 @@
         }
     }
     &-bottom{
+        margin-top: 160px;
         .cards-group {
-            margin-top: 160px;
             display: flex;
             align-items: center;
             .hexagon{
-                
+                cursor: pointer;
                 path{
                     transition: $transit;
                     fill: white;
@@ -75,6 +82,7 @@
                     fill: $customTextColor;
                 }
                 &:hover i{
+                    cursor: pointer;
                     color: white;
                 }
                 i{  
@@ -90,6 +98,30 @@
                 }
             }
             &__card {
+                // background-color: red;
+                @media (max-width:777px){
+                    p{
+                        transition: all 1s linear;
+                        opacity: 0;
+                        visibility: hidden;
+                    }
+                    h3{
+                        transition: all 1s linear;
+                        word-wrap: break-word;
+                        width: 15px;
+                        margin:0 auto;
+                        height: 60px;
+                        opacity: 1;
+                    }
+                    .hexagon:hover ~ p{
+                        opacity: 1;
+                        visibility: visible;
+                    }
+                    .hexagon:hover ~ h3{
+                        opacity: 0;
+                        visibility: hidden;
+                    }
+                }
                 text-align: center;
                 h3{
                     padding: 35px 0 27px;

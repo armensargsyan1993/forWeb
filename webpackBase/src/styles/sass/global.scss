@@ -40,7 +40,9 @@ $transit:all 1s ease;
 
 
 //owl carousel
-.owl-item {height: 0;} 
+.owl-item{
+    min-height: 400px !important;
+}
 .owl-item.active {height: auto;}
 .owl-stage-outer{
 	position: relative;
@@ -168,6 +170,7 @@ ul{
 	width: 100%;
 	padding: 0 40px;
 	margin: 0 auto;
+	height: 100%;
 }
 
 .custom-text{
