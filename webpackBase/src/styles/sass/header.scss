@@ -67,10 +67,17 @@
                 width: 100%;
             }
             .buttons-group{
+                display: flex;
+                justify-content: center;  
+                a{
+                    margin: 10px;
+                    width: 150px;
+                    display: block;
+                    padding: 20px 30px;
+                }
                 padding-top: 49px;
                 &>*:first-child{
                     background-color: $customTextColor;
-                    margin-right: 30px;
                 }
                 &>*:last-child{
                     background-color: black;

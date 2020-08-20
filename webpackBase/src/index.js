@@ -7,6 +7,8 @@ import './js/percentAndProgress.js'
 import './js/modal.js'
 import './js/header.js'
 
+document.querySelector('a').addEventListener('click',e => e.preventDefault())
+
 
 
 
