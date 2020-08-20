@@ -11,7 +11,7 @@ function contentLoad(obj){
         if(r.ok){
             return r.text();
         }else{
-            $(obj.tagId).html('Подключения к сети нет ')
+            $(obj.tagId).html('working only in server')
         }
     }).then(html => {
         $(obj.tagId).html(html)
