@@ -1,0 +1,35 @@
+.portfolio{
+    margin:20px 0;
+    overflow-y: scroll;
+    height: 100vh;
+    text-align: center;
+    h2{
+        padding: 30px;
+        color: $txtColor;
+    }
+}
+
+.custom-class{
+    width: 80%;
+    height: 200px;
+    text-align: center;
+    margin: 0 auto;
+    transition: all 3s ease;
+    opacity: 0;
+
+    h3{
+        padding: 20px;
+    }
+
+    p{
+        padding: 20px;
+        
+    }
+}
+
+.custom-class.active{
+    transition: all 3s ease;
+    opacity: 1;
+    width: 100%;
+}
+

@@ -1,0 +1,109 @@
+@mixin bgImage($url) {
+    background:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('../../components/img/header/' + $url) center/cover no-repeat;
+}
+
+.header{
+    min-height: 500px;
+    &-top{
+        padding: 25px 0;
+        background-color: #08070C;
+        & .container{
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+    &-nav ul{
+        display: flex;
+        flex-wrap: wrap;
+        li{
+            position: relative;
+            padding-left: 20px;
+            padding-bottom: 10px;
+            display: flex;
+            justify-content: center;
+            span{
+                transition: all 2s ease;
+                &:nth-child(2){
+                    content: '';
+                    position: absolute;
+                    height: 2px;
+                    transform: translateY(-25px);
+                    width: 20px;
+                    top: 30%;
+                }
+                
+                &:nth-child(3){
+                    content: '';
+                    position: absolute;
+                    height: 2px;
+                    transform: translateY(35px);
+                    width: 20px;
+                    top: 30%;
+                }
+            }
+            a:hover ~ span{
+                background-color: $customTextColor;
+            }
+        }
+        
+    }
+    &-inner{
+        &__content{
+            height: 100vh;
+            & .container{
+                height: 91vh;
+            }
+        }
+        &__title{
+            height: 100%;
+            text-align: center;
+            & h1{
+                color: white;
+                padding: 30% 0 46px;
+            }
+            & p{
+                color: white;
+                max-width: 1021px;
+                width: 100%;
+            }
+            .buttons-group{
+                display: flex;
+                justify-content: center;  
+                a{
+                    margin: 10px;
+                    width: 150px;
+                    display: block;
+                    padding: 20px 30px;
+                }
+                padding-top: 49px;
+                &>*:first-child{
+                    background-color: $customTextColor;
+                }
+                &>*:last-child{
+                    background-color: black;
+                }
+            } 
+        }
+    }
+}
+
+.first{
+    @include bgImage('first.png')
+}
+
+.second{
+    @include bgImage('second.jpg')
+}
+
+.third{
+    @include bgImage('four.jpg')
+}
+
+
+
+
+
+.header-inner__content{
+    min-height: 400px !important;
+}
+

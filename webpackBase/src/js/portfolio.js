@@ -3,7 +3,7 @@ const portfolio = document.querySelector('.portfolio')
 let timer
 
 document.addEventListener('scroll',function z(){
-    if(portfolio.getBoundingClientRect().y < 400){
+    if(portfolio.getBoundingClientRect().y < 400 && portfolio.getBoundingClientRect().y > 0){
         timer = setInterval(() => {
 
             let elem = document.createElement('div')

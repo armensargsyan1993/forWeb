@@ -1,0 +1,59 @@
+.skills{
+    min-height: 400px;
+    &__title{
+        text-align: center;
+    }
+    .skills-content{
+        flex-wrap: wrap;
+        margin-top: 60px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        text-align: center;
+        &__card{
+            display: flex;
+            margin-bottom: 20px;
+            flex-direction: column;;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            .percent-block{
+                font-size: 26px;
+                color: #212121;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 50%;
+                width: 145px;
+                height: 145px;
+            }
+            .progress {
+                transform: rotate(-90deg);
+              }
+            svg{
+                position: absolute;
+                top: -7px;
+                  
+                  .progress__value {
+                    stroke-dasharray: 339.292;
+                    stroke-dashoffset: 339.292;
+                  }
+                  
+                  @keyframes progress {
+                    from {
+                        stroke-dashoffset: 339.292;
+                    }
+                    to {
+                        stroke-dashoffset: 0;
+                    }
+                  }
+            }  
+            h3{
+                margin: 10px 0 20px;
+            }
+            p{
+                width: 151px;
+            }
+        }
+    }
+}
