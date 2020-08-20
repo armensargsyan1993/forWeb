@@ -4,34 +4,32 @@ let modalBlockContainer = document.querySelector('.modal-block-container')
 let cont = document.querySelector('.container')
 let close = document.querySelector('.close')
 let modal = document.querySelector('.my-modal')
+let bool = true
+
 
 btn.addEventListener('click',(e)=>{
-    let bool = true
-    toggle(bool)
+    bool = true
+    toggle()
     bool = false
-    document.addEventListener('keydown',help(),{once:true})
-    close.addEventListener('click',help(),{once:true})
+    document.addEventListener('keydown',toggle)
+    close.addEventListener('click',toggle)
+    
 })
 
-function toggle(bool){
-    if(event.target.classList.value == 'close'){
-        document.removeEventListener('keydown',toggle,{once:true})
+function toggle(){
+    if(event.target.classList.value == 'close' || event.code == 'Escape'){
+        document.removeEventListener('keydown',toggle)
+        close.removeEventListener('click',toggle)
     }
-    if(event.code = 'Escape'){
-        close.removeEventListener('click',toggle,{once:true})
-    }
-    if(bool || event.code === 'Escape' || event.target.classList.value == 'close'){
+
+    if(bool || event.code == 'Escape' || event.target.classList.value == 'close'){
         cont.classList.toggle('padding')
         modal.classList.toggle('mmo')
         modalBlockContainer.classList.toggle('modal-block')
         document.body.classList.toggle('hidden');
-    }
+    }   
 }
 
-
-function help() {
-    return toggle
-}
 
 
 

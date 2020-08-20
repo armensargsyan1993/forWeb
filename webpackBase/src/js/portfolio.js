@@ -5,8 +5,8 @@ let timer
 document.addEventListener('scroll',function z(){
     if(portfolio.getBoundingClientRect().y < 400){
         timer = setInterval(() => {
+
             let elem = document.createElement('div')
-            elem.classList.add('custom-class')
             let color = `#${Math.round(Math.random()*10000)}`
             elem.style.backgroundColor = color
             let h3 = document.createElement('h3')
@@ -16,6 +16,10 @@ document.addEventListener('scroll',function z(){
             elem.append(h3)
             elem.append(p)
             portfolio.append(elem)
+            elem.classList.add('custom-class')
+            setTimeout(()=> {
+                elem.classList.add('active')
+            },20)
         }, 1000);
         document.removeEventListener('scroll',z)
     }
